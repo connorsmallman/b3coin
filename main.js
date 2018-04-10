@@ -74,7 +74,7 @@ export default class Blockchain{
   }
 
   minePendingTransactions(miningRewardAddress) {
-    let block = new Block(Date.now(), this.pendingTransactions);
+    const block = new Block(Date.now(), this.pendingTransactions);
     block.mineBlock(this.difficulty);
     this.chain.push(block);
 
